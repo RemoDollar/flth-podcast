@@ -1,0 +1,67 @@
+.hero {
+  height: 100vh;
+  min-height: 700px;
+
+  background:
+    linear-gradient(rgba(10, 10, 10, 0.8), rgba(10, 10, 10, 0.9)),
+    url("/public/hero-bg.jpg") center center/cover no-repeat;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  color: white;
+  text-align: center;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+  padding: 0 2rem;
+}
+
+.title {
+  font-size: clamp(3rem, 8vw, 7rem);
+  font-weight: 700;
+}
+
+.title span {
+  color: #d4181f;
+}
+
+.subtitle {
+  margin-top: 1rem;
+  font-size: 1.3rem;
+}
+
+.ctaGroup {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.primaryBtn,
+.secondaryBtn {
+  padding: 1rem 2rem;
+  border-radius: 6px;
+  text-decoration: none;
+}
+
+.primaryBtn {
+  background: #d4181f;
+  color: white;
+}
+
+.secondaryBtn {
+  border: 2px solid #d4181f;
+  color: white;
+}
