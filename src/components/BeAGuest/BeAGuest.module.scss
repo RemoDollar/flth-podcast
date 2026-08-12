@@ -1,0 +1,390 @@
+.beGuest {
+  background: #080808;
+  padding: 120px 0;
+  scroll-margin-top: 110px;
+}
+
+.container {
+  width: 100%;
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 40px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: start;
+}
+
+/* ===========================
+   LEFT SIDE
+=========================== */
+
+.left {
+  position: sticky;
+  top: 120px;
+}
+
+.subtitle {
+  color: #ff3131;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+}
+
+.title {
+  color: white;
+  font-size: 56px;
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 25px;
+}
+
+.title span {
+  color: #ff3131;
+}
+
+.description {
+  color: #c9c9c9;
+  font-size: 18px;
+  line-height: 1.9;
+  margin-bottom: 45px;
+}
+
+/* ===========================
+   FEATURES
+=========================== */
+
+.features {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.featureCard {
+  display: flex;
+  gap: 18px;
+
+  background: rgba(255, 255, 255, 0.03);
+
+  border: 1px solid rgba(255, 255, 255, 0.06);
+
+  border-radius: 18px;
+
+  padding: 22px;
+
+  transition: 0.35s ease;
+}
+
+.featureCard:hover {
+  transform: translateY(-6px);
+
+  border-color: rgba(255, 49, 49, 0.3);
+
+  box-shadow: 0 20px 45px rgba(255, 49, 49, 0.15);
+}
+
+.icon {
+  width: 58px;
+  height: 58px;
+
+  border-radius: 50%;
+
+  background: rgba(255, 49, 49, 0.12);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 26px;
+
+  flex-shrink: 0;
+}
+
+.featureCard h4 {
+  color: white;
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+.featureCard p {
+  color: #b9b9b9;
+  line-height: 1.7;
+}
+
+/* ===========================
+   RIGHT SIDE
+=========================== */
+
+.right {
+  width: 100%;
+}
+
+.formCard {
+  background: rgba(255, 255, 255, 0.03);
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  border-radius: 24px;
+
+  backdrop-filter: blur(14px);
+
+  padding: 45px;
+
+  transition: 0.35s ease;
+
+  box-shadow: 0 20px 55px rgba(0, 0, 0, 0.4);
+}
+
+.formCard:hover {
+  border-color: rgba(255, 49, 49, 0.35);
+
+  box-shadow: 0 28px 70px rgba(255, 49, 49, 0.18);
+}
+
+.formCard h3 {
+  color: white;
+  font-size: 34px;
+  margin-bottom: 14px;
+}
+
+.formCard > p {
+  color: #bfbfbf;
+  line-height: 1.8;
+  margin-bottom: 35px;
+}
+
+/* ===========================
+   FORM
+=========================== */
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form input,
+.form textarea {
+  width: 100%;
+
+  padding: 18px 20px;
+
+  border-radius: 12px;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  background: rgba(255, 255, 255, 0.05);
+
+  color: white;
+
+  font-size: 16px;
+
+  outline: none;
+
+  transition: 0.3s;
+}
+
+.form textarea {
+  resize: vertical;
+  min-height: 150px;
+}
+
+.form input::placeholder,
+.form textarea::placeholder {
+  color: #8d8d8d;
+}
+
+.form input:focus,
+.form textarea:focus {
+  border-color: #ff3131;
+
+  background: rgba(255, 255, 255, 0.08);
+
+  box-shadow: 0 0 18px rgba(255, 49, 49, 0.18);
+}
+
+/* ===========================
+   BUTTON
+=========================== */
+
+.submitBtn {
+  margin-top: 15px;
+
+  border: none;
+
+  border-radius: 12px;
+
+  padding: 18px;
+
+  background: linear-gradient(135deg, #ff3131, #ff5a5a);
+
+  color: white;
+
+  font-size: 17px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.35s ease;
+
+  box-shadow: 0 15px 35px rgba(255, 49, 49, 0.28);
+}
+
+.submitBtn:hover:not(:disabled) {
+  transform: translateY(-4px);
+
+  box-shadow: 0 22px 50px rgba(255, 49, 49, 0.4);
+}
+
+.submitBtn:disabled {
+  cursor: not-allowed;
+  opacity: 0.75;
+}
+
+/* ===========================
+   SUCCESS
+=========================== */
+
+.status {
+  margin-top: 24px;
+
+  padding: 22px;
+
+  border-radius: 14px;
+
+  background: rgba(74, 209, 118, 0.08);
+
+  border: 1px solid rgba(74, 209, 118, 0.25);
+
+  animation: fadeIn 0.35s ease;
+}
+
+.status strong {
+  display: block;
+
+  color: #74e39b;
+
+  font-size: 18px;
+
+  margin-bottom: 10px;
+}
+
+.status p {
+  color: #dcffe7;
+
+  line-height: 1.8;
+
+  margin: 0;
+}
+
+/* ===========================
+   ERROR
+=========================== */
+
+.error {
+  margin-top: 24px;
+
+  padding: 22px;
+
+  border-radius: 14px;
+
+  background: rgba(255, 49, 49, 0.08);
+
+  border: 1px solid rgba(255, 49, 49, 0.25);
+
+  animation: fadeIn 0.35s ease;
+}
+
+.error strong {
+  display: block;
+
+  color: #ff9d9d;
+
+  font-size: 18px;
+
+  margin-bottom: 10px;
+}
+
+.error p {
+  color: #ffdcdc;
+
+  line-height: 1.8;
+
+  margin: 0;
+}
+
+/* ===========================
+   Animation
+=========================== */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===========================
+   Responsive
+=========================== */
+
+@media (max-width: 1100px) {
+  .container {
+    grid-template-columns: 1fr;
+
+    gap: 70px;
+  }
+
+  .left {
+    position: static;
+  }
+}
+
+@media (max-width: 768px) {
+  .beGuest {
+    padding: 90px 0;
+  }
+
+  .container {
+    padding: 0 22px;
+  }
+
+  .title {
+    font-size: 38px;
+  }
+
+  .description {
+    font-size: 17px;
+  }
+
+  .formCard {
+    padding: 30px;
+  }
+
+  .formCard h3 {
+    font-size: 28px;
+  }
+
+  .featureCard {
+    padding: 18px;
+  }
+
+  .icon {
+    width: 50px;
+    height: 50px;
+    font-size: 22px;
+  }
+
+  .submitBtn {
+    width: 100%;
+  }
+}

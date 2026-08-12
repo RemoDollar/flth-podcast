@@ -1,70 +1,321 @@
 .episodes {
-  padding: 6rem 0;
-  background: #111111;
-  color: white;
+  background: #0b0b0b;
+  padding: 120px 0;
+  padding-bottom: 140px;
+  scroll-margin-top: 90px;
 }
 
 .container {
-  max-width: 1200px;
+  width: 100%;
+  max-width: 1300px;
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 0 40px;
 }
 
-.sectionTitle {
-  font-family: "Bebas Neue", sans-serif;
-  font-size: 3.5rem;
+/* ==========================
+   HEADING
+========================== */
+
+.heading {
   text-align: center;
-  margin-bottom: 3rem;
-  color: white;
+  max-width: 820px;
+  margin: 0 auto 80px;
 }
+
+.subtitle {
+  color: #ff3131;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+}
+
+.title {
+  color: #fff;
+  font-size: 56px;
+  font-weight: 900;
+  line-height: 1.1;
+  margin-bottom: 22px;
+}
+
+.title span {
+  color: #ff3131;
+}
+
+.description {
+  color: #bdbdbd;
+  font-size: 19px;
+  line-height: 1.9;
+}
+
+/* ==========================
+   GRID
+========================== */
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 42px;
 }
 
+/* ==========================
+   CARD
+========================== */
+
 .card {
-  background: #1a1a1a;
-  border-radius: 12px;
+  background: #141414;
+  border-radius: 22px;
   overflow: hidden;
-  transition: transform 0.3s ease;
+
+  border: 1px solid rgba(255, 255, 255, 0.06);
+
+  transition:
+    transform 0.45s ease,
+    box-shadow 0.45s ease,
+    border-color 0.45s ease;
 }
 
 .card:hover {
-  transform: translateY(-8px);
+  transform: translateY(-12px);
+
+  border-color: rgba(255, 49, 49, 0.25);
+
+  box-shadow:
+    0 30px 70px rgba(255, 49, 49, 0.18),
+    0 0 40px rgba(255, 49, 49, 0.08);
 }
 
-.thumbnail {
-  height: 200px;
-  background: #333;
+/* ==========================
+   IMAGE
+========================== */
+
+.imageWrapper {
   position: relative;
+  height: 390px;
+  overflow: hidden;
 }
 
-.card h3 {
-  padding: 1.2rem 1.2rem 0.5rem;
-  font-size: 1.35rem;
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  transition:
+    transform 0.6s ease,
+    filter 0.6s ease;
 }
 
-.card p {
-  padding: 0 1.2rem 1.5rem;
-  color: #bbb;
-  line-height: 1.5;
+.card:hover .image {
+  transform: scale(1.06);
+  filter: brightness(1.08);
 }
 
-.watchBtn {
-  display: block;
-  margin: 0 1.2rem 1.2rem;
-  padding: 1rem;
-  background: #d4181f;
+/* ==========================
+   OVERLAY
+========================== */
+
+.overlay {
+  position: absolute;
+  inset: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: linear-gradient(rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0.45));
+
+  transition: 0.4s;
+}
+
+.card:hover .overlay {
+  background: linear-gradient(rgba(0, 0, 0, 0.02), rgba(0, 0, 0, 0.55));
+}
+
+/* ==========================
+   PLAY BUTTON
+========================== */
+
+.playButton {
+  width: 68px;
+  height: 68px;
+
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(255, 49, 49, 0.94);
+
   color: white;
-  text-align: center;
-  border-radius: 6px;
-  text-decoration: none;
-  font-weight: 700;
-  text-transform: uppercase;
+
+  font-size: 28px;
+
+  box-shadow: 0 10px 35px rgba(255, 49, 49, 0.45);
+
+  transition: all 0.35s ease;
 }
 
-.watchBtn:hover {
-  background: #ff2d36;
+.card:hover .playButton {
+  transform: scale(1.12);
+
+  box-shadow: 0 18px 45px rgba(255, 49, 49, 0.65);
+}
+
+/* ==========================
+   CONTENT
+========================== */
+
+.content {
+  padding: 32px;
+}
+
+.content h3 {
+  color: white;
+  font-size: 30px;
+  margin-bottom: 18px;
+}
+
+.content p {
+  color: #cfcfcf;
+  line-height: 1.85;
+  margin-bottom: 24px;
+}
+
+.meta {
+  display: flex;
+  gap: 22px;
+
+  color: #9c9c9c;
+
+  margin-bottom: 24px;
+
+  font-size: 15px;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+
+  margin-bottom: 30px;
+}
+
+.tags span {
+  padding: 8px 18px;
+
+  border-radius: 999px;
+
+  background: rgba(255, 49, 49, 0.1);
+
+  border: 1px solid rgba(255, 49, 49, 0.28);
+
+  color: #ff4b4b;
+
+  font-size: 14px;
+
+  font-weight: 600;
+}
+
+/* ==========================
+   BUTTONS
+========================== */
+
+.buttons {
+  display: flex;
+  gap: 16px;
+}
+
+.buttons a {
+  flex: 1;
+
+  padding: 15px;
+
+  text-align: center;
+
+  border-radius: 10px;
+
+  text-decoration: none;
+
+  font-weight: 700;
+
+  transition: 0.3s;
+}
+
+.tiktok {
+  background: #050505;
+  color: white;
+  border: 1px solid #2a2a2a;
+}
+
+.tiktok:hover {
+  background: #171717;
+  transform: translateY(-2px);
+}
+
+.youtube {
+  background: #ff3131;
+  color: white;
+}
+
+.youtube:hover {
+  background: #df1d1d;
+  transform: translateY(-2px);
+}
+
+/* ==========================
+   MOBILE
+========================== */
+
+@media (max-width: 992px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .title {
+    font-size: 42px;
+  }
+
+  .imageWrapper {
+    height: 330px;
+  }
+}
+
+@media (max-width: 768px) {
+  .episodes {
+    padding: 90px 0 110px;
+  }
+
+  .container {
+    padding: 0 22px;
+  }
+
+  .heading {
+    margin-bottom: 55px;
+  }
+
+  .title {
+    font-size: 34px;
+  }
+
+  .description {
+    font-size: 17px;
+  }
+
+  .content {
+    padding: 24px;
+  }
+
+  .content h3 {
+    font-size: 24px;
+  }
+
+  .buttons {
+    flex-direction: column;
+  }
+
+  .imageWrapper {
+    height: 280px;
+  }
 }

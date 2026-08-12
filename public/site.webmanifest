@@ -1,0 +1,21 @@
+{
+  "name": "From Lowest To Highest Podcast",
+  "short_name": "FLTH Podcast",
+  "description": "Real stories. Real faith. Real transformation.",
+  "theme_color": "#0a0a0a",
+  "background_color": "#0a0a0a",
+  "display": "standalone",
+  "start_url": "/",
+  "icons": [
+    {
+      "src": "/favicon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
